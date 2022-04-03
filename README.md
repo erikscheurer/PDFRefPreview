@@ -12,7 +12,7 @@ This script only works if the viewer is [PDF.js](https://github.com/mozilla/pdf.
 
 ## Firefox
 
-PDF.js is the default viewer in Firefox. To install the script, create a bookmark and add the code below to the `location` field. Use the bookmark to toggle enable/disable preview after a PDF has been loaded.
+PDF.js is the default viewer in Firefox. To install the script, create a bookmark and add the code below to the `URL` field. Use the bookmark to toggle enable/disable preview after a PDF has been loaded.
 
 ```js
 javascript:(
