@@ -19,8 +19,10 @@ javascript:(
     async () => { 
         const e = window.PDFViewerApplication, 
         t = document.getElementById("viewer");
+        if (document.body.onkeydown != null)
+            document.body.onkeydown = null;
         if ("_previewHandler" in e) 
-            return t.removeEventListener("mouseover", e._previewHandler), 
+            return t.removeEventListener("mouseover", e._previewHandler);
         delete e._previewHandler, void delete e._previewing;
         const n = t.getBoundingClientRect(), 
         i = (n.left + n.right) / 2,
@@ -78,5 +80,19 @@ javascript:(
                     e._previewing = !1 
                 })
         }
-     e._previewing = !1, t.addEventListener("mouseover", o), e._previewHandler = o })();
+        async function addkeyevent(n){
+            temp = document.body.onkeydown;
+            document.body.onkeydown = function(event){
+                if (event.key == "Control" ||
+                event.code == "ControlLeft" ||      
+                event.keyCode == 17      
+            ) {
+                o(n);
+                document.body.onkeydown=temp;
+            }
+            }
+        }
+        e._previewing = !1, 
+        t.addEventListener("mouseover", addkeyevent), 
+        e._previewHandler = addkeyevent })();
 ```
