@@ -1,6 +1,6 @@
 # PDF Ref Preview
 
-Preview internal links in PDFs on mouse hover.
+Preview internal links in PDFs on mouse hover. On this fork of the [original repo](https://github.com/belinghy/PDFRefPreview), the preview only appears if you press `ctrl` while hovering on a link. Figures, where the content are above the internal link are also better displayed.
 
 <p align="center">
   <img title="Demo" src="https://raw.githubusercontent.com/belinghy/PDFRefPreview/assets/assets/demo.gif">
@@ -10,7 +10,7 @@ The script works by following internal links to the target page and location, an
 
 This script only works if the viewer is [PDF.js](https://github.com/mozilla/pdf.js/).
 
-## Firefox
+## Installation
 
 PDF.js is the default viewer in Firefox. To install the script, create a bookmark and add the code below to the `URL` field. Use the bookmark to toggle enable/disable preview after a PDF has been loaded.
 
